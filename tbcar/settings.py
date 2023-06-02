@@ -91,9 +91,10 @@ DATABASES = {
     }
 }
 import dj_database_url
-
+DATABASE_URL = os.environ.get('DATABASE_URL')
+print(DATABASE_URL)
 DATABASES = {
-    'default': dj_database_url.parse(dj_database_url.config('DATABASE_URL'))
+    'default': dj_database_url.parse('postgres://db_301259x_user:3tVV2sptgozA8zBbTYcqEafdpFELHeaO@dpg-chsjdi2k728ud3jmfad0-a.oregon-postgres.render.com/db_301259x')
 }
 
 
